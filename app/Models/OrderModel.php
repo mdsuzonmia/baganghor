@@ -1,0 +1,3 @@
+<?php
+namespace App\Models; use CodeIgniter\Model;
+class OrderModel extends Model{protected $table='orders';protected $returnType='array';protected $useTimestamps=true;protected $allowedFields=['order_no','public_token','checkout_token','customer_id','customer_name','customer_mobile','district_id','district_name','upazila_id','upazila_name','area','address_line','landmark','subtotal','discount','delivery_charge','delivery_charge_paid_at','delivery_charge_paid_by','grand_total','payment_method_id','payment_method_code','payment_status','order_status','customer_note','admin_note','source','inventory_restored_at','ip_address','user_agent','placed_at'];}

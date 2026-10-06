@@ -1,0 +1,8 @@
+
+app\Controllers\HomeController.php:14:        return view('frontend/home', $data + ['homepage'=>$content,'title'=>$content['seo_title'],'metaDescription'=>$content['seo_description'],'ogImage'=>$content['hero_image']?:null]);
+app\Controllers\Admin\HomepageController.php:22:        try{$newPath=$upload->store($this->request->getFile('hero_image'),'homepage');$values['hero_image']=$newPath?:($this->request->getPost('remove_hero_image')?'':$current['hero_image']);$service->set($values);}catch(\Throwable 
+$e){if($newPath)$upload->delete($newPath);return redirect()->back()->withInput()->with('danger',$e->getMessage());}
+app\Controllers\Admin\HomepageController.php:23:        if(!empty($current['hero_image'])&&$current['hero_image']!==$values['hero_image'])$upload->delete($current['hero_image']);
+
+
+

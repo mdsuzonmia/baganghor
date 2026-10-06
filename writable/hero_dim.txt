@@ -1,0 +1,7 @@
+﻿C:\xampp\php\php.exe : PHP Parse error:  syntax error, unexpected token ":" in Command line code on line 1
+At line:1 char:1
++ C:\xampp\php\php.exe -r '$p="C:/xampp/htdocs/taharat_agro/public/uplo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (PHP Parse error... code on line 1:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

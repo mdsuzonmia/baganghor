@@ -1,0 +1,12 @@
+﻿FILE=C:\xampp\htdocs\taharat_agro\writable\debugbar\debugbar_1789463686.681015.json
+LEN=104875
+PAT=hero_image IDX=86840
+rent\"><span class=\"kint-access-path-trigger\" title=\"Show access path\"><\/span><nav><\/nav><dfn>hero_image<\/dfn> =&gt; <var>string<\/var> (61) \"uploads\/homepage\/2026\/09\/375c9cf24a5e924e2b49e330970d6390.png\"<div class=\"access-path\">$value['hero_image']<\/div><\/dt><dd><ul class=\"kint-ta
+PAT=uploads IDX=51361
+ title=\"Show access path\"><\/span><nav><\/nav><dfn>favicon<\/dfn> =&gt; <var>string<\/var> (69) \"uploads\/branding\/favicon\/2026\/09\/b5ee59d6309790d1254b8aa1b9b07c16.png\"<div class=\"access-path\">$value['favicon']<\/div><\/dt><dd><ul class=\"kint-tabs\"><li class=\"kint-active-tab\">File (987
+--- UPLOADS ---
+C:\xampp\htdocs\taharat_agro\public\uploads\branding\favicon\2026\09\b5ee59d6309790d1254b8aa1b9b07c16.png 1011647
+C:\xampp\htdocs\taharat_agro\public\uploads\branding\logo\2026\09\ebfd47a15c702a9b9a1647610b3aaeaa.png 718207
+C:\xampp\htdocs\taharat_agro\public\uploads\homepage\2026\09\375c9cf24a5e924e2b49e330970d6390.png 2410624
+C:\xampp\htdocs\taharat_agro\public\uploads\products\2026\09\3f0a9e99eb775a4606fa54e302b8c9ee.jpg 172065
+C:\xampp\htdocs\taharat_agro\public\uploads\products\2026\09\75594176ab8034208fee3ed155667b45.jpg 10199

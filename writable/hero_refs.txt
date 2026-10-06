@@ -1,0 +1,25 @@
+﻿=== hero-content ===
+app\Views\frontend\home.php:2
+public\assets\frontend\css\app.css:7
+public\assets\frontend\css\app.css:9
+=== hero-grid ===
+=== hero-media ===
+=== hero_image ===
+app\Controllers\Admin\HomepageController.php:22
+app\Controllers\Admin\HomepageController.php:23
+app\Controllers\HomeController.php:14
+app\Services\HomepageContentService.php:10
+app\Views\admin\homepage\index.php:6
+app\Views\frontend\home.php:2
+=== hero-kicker ===
+app\Views\frontend\home.php:2
+public\assets\frontend\css\app.css:4
+public\assets\frontend\css\app.css:7
+=== \.hero ===
+app\Views\welcome_message.php:98
+app\Views\welcome_message.php:103
+app\Views\welcome_message.php:107
+public\assets\frontend\css\app.css:4
+public\assets\frontend\css\app.css:7
+public\assets\frontend\css\app.css:9
+public\assets\frontend\css\app.css:10

@@ -1,0 +1,8 @@
+﻿
+FullName                                                                   Length
+--------                                                                   ------
+C:\xampp\htdocs\taharat_agro\public\assets\frontend\css\app.css             17248
+C:\xampp\htdocs\taharat_agro\public\assets\frontend\images\placeholder.svg    586
+C:\xampp\htdocs\taharat_agro\public\assets\frontend\js\app.js                2030
+
+

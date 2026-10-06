@@ -1,0 +1,1 @@
+<a class="category-card" href="<?= url_to('catalog.category',$category['slug']) ?>"><img src="<?= store_image($category['image']??null) ?>" width="280" height="210" loading="lazy" alt="<?= esc($category['name'],'attr') ?>"><span><?= esc($category['name']) ?></span></a>

@@ -1,0 +1,8 @@
+﻿--- PHP LINT ---
+No syntax errors detected in C:\xampp\htdocs\taharat_agro\app\Views\frontend\home.php
+--- IMAGE DIMS ---
+1536x1024 ratio=1.5
+--- CSS HERO RULE ---
+.hero{display:grid;min-height:470px;place-items:center;color:#fff;background-color:#164c2a;background-image:linear-gradient(90deg,rgba(17,66,34,.97),rgba(31,107,58,.82)),radial-gradient(circle at 80% 30%,#6e9b57,transparent 35%);background-repeat:no-repeat;background-position:center center;background-size:cover}.hero-c
+--- CSS HERO BASE RULE ---
+.hero{background-repeat:no-repeat;background-position:center center;background-size:cover}.hero h1,.hero p,.hero-kicker{text-shadow:0 2px 12px rgba(8,

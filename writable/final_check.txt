@@ -1,0 +1,10 @@
+﻿CSS_LEN=17517 OPEN_BRACE=248 CLOSE_BRACE=248
+IMG_STATUS=200 TYPE=image/png LEN=2410624
+--- GIT ---
+git : fatal: not a git repository (or any of the parent directories): .git
+At line:1 char:536
++ ... --'; $o += (git -C 'C:\xampp\htdocs\taharat_agro' status --short 2>&1 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: not a gi...ectories): .git:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

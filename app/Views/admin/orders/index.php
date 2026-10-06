@@ -1,0 +1,17 @@
+<?= $this->extend('admin/layouts/main') ?>
+<?= $this->section('content') ?>
+<div class="d-flex justify-content-between align-items-center mb-4"><h1 class="h3 mb-0">Orders</h1><?php if($canManage): ?><a class="btn btn-success" href="<?= url_to('admin.orders.create') ?>">+ New order</a><?php endif ?></div>
+<form class="card border-0 p-3 mb-3" method="get"><div class="row g-2">
+<div class="col-lg-3"><label class="form-label">Search</label><input class="form-control" name="q" value="<?= esc(service('request')->getGet('q')) ?>" placeholder="Order, customer or mobile"></div>
+<div class="col-lg-2"><label class="form-label">Order status</label><select class="form-select" name="order_status"><option value="">All</option><?php foreach(['pending','confirmed','processing','shipped','delivered','cancelled'] as $status): ?><option value="<?= $status ?>" <?= service('request')->getGet('order_status')===$status?'selected':'' ?>><?= ucfirst($status) ?></option><?php endforeach ?></select></div>
+<div class="col-lg-2"><label class="form-label">Payment status</label><select class="form-select" name="payment_status"><option value="">All</option><?php foreach(['unpaid','pending_verification','paid','failed'] as $status): ?><option value="<?= $status ?>" <?= service('request')->getGet('payment_status')===$status?'selected':'' ?>><?= ucfirst(str_replace('_',' ',$status)) ?></option><?php endforeach ?></select></div>
+<div class="col-lg-2"><label class="form-label">Payment method</label><select class="form-select" name="payment_method_code"><option value="">All</option><?php foreach(['cod'=>'COD','bkash'=>'bKash','nagad'=>'Nagad','cellfin'=>'CellFin','dbbl_bank'=>'DBBL Bank'] as $code=>$label): ?><option value="<?= $code ?>" <?= service('request')->getGet('payment_method_code')===$code?'selected':'' ?>><?= esc($label) ?></option><?php endforeach ?></select></div>
+<div class="col-lg-2"><label class="form-label">From</label><input class="form-control" type="date" name="from" value="<?= esc(service('request')->getGet('from')) ?>"></div>
+<div class="col-lg-2"><label class="form-label">To</label><input class="form-control" type="date" name="to" value="<?= esc(service('request')->getGet('to')) ?>"></div>
+<div class="col-auto align-self-end"><button class="btn btn-success">Filter</button> <a class="btn btn-outline-secondary" href="<?= url_to('admin.orders') ?>">Clear</a></div>
+</div></form>
+<div class="card border-0"><div class="table-responsive"><table class="table align-middle mb-0"><thead><tr><th>Order</th><th>Customer</th><th>Mobile</th><th>Total</th><th>Payment</th><th>Status</th><th>Placed</th><th></th></tr></thead><tbody>
+<?php foreach($orders as $order): ?><tr><td><strong><?= esc($order['order_no']) ?></strong></td><td><?= esc($order['customer_name']) ?></td><td><?= esc($order['customer_mobile']) ?></td><td><?= format_bdt($order['grand_total']) ?></td><td><?= esc(strtoupper($order['payment_method_code']).' / '.$order['payment_status']) ?></td><td><span class="badge text-bg-secondary"><?= esc($order['order_status']) ?></span></td><td><?= esc($order['placed_at']) ?></td><td><a class="btn btn-sm btn-outline-success" href="<?= url_to('admin.orders.show',$order['id']) ?>">View</a></td></tr><?php endforeach ?>
+<?php if(!$orders): ?><tr><td colspan="8" class="text-center py-4">No orders found.</td></tr><?php endif ?>
+</tbody></table></div></div><div class="mt-3"><?= $pager->links() ?></div>
+<?= $this->endSection() ?>

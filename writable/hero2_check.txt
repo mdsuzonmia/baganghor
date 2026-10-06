@@ -1,0 +1,12 @@
+﻿--- LINT ---
+No syntax errors detected in C:\xampp\htdocs\taharat_agro\app\Views\frontend\home.php
+No syntax errors detected in C:\xampp\htdocs\taharat_agro\app\Views\admin\homepage\index.php
+CSS_LEN=17972 OPEN=255 CLOSE=255
+.hero-grid{display:grid;align-items:center;gap:clamp(1.75rem,4vw,3.5rem);padding:4.25rem 0}.hero-grid.has-media{grid-template-columns:minmax(0,1fr) minmax(0,1.06fr)}.hero-media{margin:0}.hero-media img{display:block;widt
+.hero-grid.has-media{grid-template-columns:minmax(0,1fr) minmax(0,1.06fr)}.hero-media{margin:0}.hero-media img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center center;border-radius:1.25re
+.hero-media img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center center;border-radius:1.25rem;box-shadow:0 0 0 1px rgba(255,255,255,.09),0 1.4rem 3rem rgba(8,32,18,.32)}.hero h1,.hero p,.
+.hero-content{max-width:640px}.hero-kicker,.section-heading>div>span,.eyebrow{color:#77b95b;font-weight:750;letter-spacing:.04em;text-transform:uppercase}.hero h1{max-width:640px;margin:.65rem 0 1rem;font-size:clamp(2rem
+.hero h1{max-width:640px;margin:.65rem 0 1rem;font-size:clamp(2rem,3.4vw,3.4rem);font-weight:850;line-height:1.1}.hero p{margin-bottom:1.75rem;font-size:1.15rem;color:#e4f0e5}.trust-bar{border-bottom:1px solid var(--bord
+STATUS=200 LEN=42210
+HERO_IDX=33862
+<section class="hero"><div class="container"><div class="hero-grid has-media"><div class="hero-content"><span class="hero-kicker">বিশ্বস্ত কৃষি ও বাগান পণ্য</span><h1>আপনার বাগানের প্রয়োজনীয় সবকিছু এক জায়গায়</h1><p>জৈব সার • গ্রো ব্যাগ • কোকো পিট • মালচিং পেপার • বাগান উপকরণ</p><div class="d-flex flex-wrap gap-2"><a class="btn btn-primary btn-lg" href="http://localhost/taharat_agro/products">পণ্য দেখুন</a><a class="btn btn-outline-light btn-lg" href="http://localhost/taharat_agro/packages">গার্ডেনিং প্যাক দেখুন</a></div></div><div class="hero-media"><img src="http&#x3A;&#x2F;&#x2F;localhost&#x2F;taharat_agro&#x2F;uploads&#x2F;homepage&#x2F;2026&#x2F;09&#x2F;375c9cf24a5e924e2b49e330970d6390.png" alt="&#x0986;&#x09AA;&#x09A8;&#x09BE;&#x09B0;&#x20;&#x09AC;&#x09BE;&#x0997;&#x09BE;&#x09A8;&#x09C7;&#x09B0;&#x20;&#x09AA;&#x09CD;&#x09B0;&#x09DF;&#x09CB;&#x099C;&#x09A8;&#x09C0;&#x09DF;&#x20;&#x09
