@@ -2,31 +2,32 @@ Options -Indexes
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /taharat_agro/
 
-    # Keep public/ internal and redirect old bookmarked public URLs.
-    RewriteCond %{THE_REQUEST} \s/+taharat_agro/public/ [NC]
-    RewriteRule ^public(?:/(.*))?$ /taharat_agro/$1 [R=301,L,NE]
+    # Pass bearer/basic authentication through to PHP.
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Keep public/ out of browser-visible URLs. These conditions ensure that
+    # the redirect applies only to a client request, not our internal rewrite.
+    RewriteCond %{THE_REQUEST} \s/+[^?\ ]*public/?[?\ ] [NC]
+    RewriteRule ^public/?$ ./ [R=301,L,NE]
+    RewriteCond %{THE_REQUEST} \s/+[^?\ ]*public/ [NC]
+    RewriteRule ^public/(.+)$ $1 [R=301,L,NE]
 
     # Never expose framework source, dependencies, runtime data, or secrets.
     RewriteRule ^(?:app|vendor|writable|tests|build)(?:/|$) - [F,L,NC]
     RewriteRule ^(?:\.env(?:\.example)?|env|composer\.(?:json|lock)|phpunit\.dist\.xml|spark|preload\.php|builds)(?:/|$) - [F,L,NC]
 
-    # Serve browser assets from the real public directory.
-    RewriteCond %{DOCUMENT_ROOT}/taharat_agro/public/$1 -f [OR]
-    RewriteCond %{DOCUMENT_ROOT}/taharat_agro/public/$1 -d
-    RewriteRule ^(.+)$ public/$1 [L]
-
-    # Send application requests to CI4's front controller.
+    # Route everything through the real web root. Once rewritten, stop this
+    # outer .htaccess from processing the request again; public/.htaccess will
+    # serve real assets or send application routes to index.php.
+    RewriteRule ^public(?:/|$) - [L]
     RewriteRule ^$ public/index.php [L,NC,QSA]
-    RewriteRule ^(.+)$ public/index.php/$1 [L,NC,QSA]
-
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteRule ^(.+)$ public/$1 [L,NC,QSA]
 </IfModule>
 
 <IfModule !mod_rewrite.c>
-    ErrorDocument 404 /taharat_agro/public/index.php
+    ErrorDocument 404 public/index.php
 </IfModule>
 
 ServerSignature Off
